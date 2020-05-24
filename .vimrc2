@@ -1,8 +1,108 @@
 "  VIMRC
 
+" ------------------------   PLUGINS   ------------------------
+
+" NOTE: If you are using this config, change the plug directory to
+" $HOME/.vim/plugged
+call plug#begin('.vim/plugged')
+
+" BASIC PLUGINS EVERYONE SHOULD HAVE:
+
+" Make sure you use single quotes when including a plugin
+
+" Shorthand notation; fetches https://github.com/tpope/vim-repeat
+Plug 'tpope/vim-repeat' " Repeat plugin commands with period
+
+" Snazz up status line
+Plug 'https://github.com/vim-airline/vim-airline.git' " Any valid git URL is allowed
+
+" Groovy colorscheme
+Plug 'morhetz/gruvbox'
+
+" Comment out text objects
+Plug 'tpope/vim-commentary'
+
+" Syntax highlighting for most languages
+Plug 'sheerun/vim-polyglot'
+
+" Basic file browser
+Plug 'preservim/nerdtree'
+
+" SOME OTHER NICE PLUGINS I USE:
+
+" Git integration
+" Plug 'tpope/vim-fugitive'
+
+" Git integration with nerd tree
+" Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Nicer scala syntax and some other sugar
+" Plug 'derekwyatt/vim-scala'
+
+" Nicer pytho9n syntax
+" Plug 'vim-python/python-syntax'
+
+" Use LSP just like VSCode
+" This requires some extensive setup, but basically turns vim into an IDE
+" Plug 'neoclide/coc.nvim', {'branch': 'release' } 
+
+" Initialize plugin system
+call plug#end()
+
+
+
+
+" ------------------------   CONFIGURE PLUGINS   ------------------------
+map <Leader>n :NERDTreeToggle<CR>
+nmap <Leader>/ :Commentary<CR>
+
+
+
+
+" ------------------------   CUSTOM KEYBINDINGS   ------------------------
+" Insert mode nav keys
+
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+" Half page up/down but recenter
+nnoremap <m-d> Lzz
+nnoremap <m-u> Hzz
+
+" When using macros, I always accidentally hit shift-Q and go to Ex mode.
+nnoremap Q <Nop>
+
+" Add blank line below cursor
+nnoremap <M-o> o<Esc>
+
+" Better indenting
+vnoremap < <gv
+vnoremap > >gv
+
+" Make splits
+nnoremap <leader>v :vsplit<cr>
+nnoremap <leader>h :split<cr>
+
+" easier split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-L> <C-W><C-L>
+
+" Window resize
+nnoremap <M-j> :resize -1<CR>
+nnoremap <M-k> :resize +1<CR>
+nnoremap <M-h> :vertical resize -1<CR>
+nnoremap <M-l> :vertical resize +1<CR>
+
+
+
+" ------------------------   SETTINGS   ------------------------
 " CONFIGURE HOW VIM RUNS:
 set clipboard=unnamedplus " Enable clipboard interaction.
-" set mouse=a " Enable mouse interaction.  Only works with neovim
+" set mouse=a " Enable mouse interaction.  Not compatible with vim8
 set showcmd " drop-down tab completion on commands
 set nocompatible
 filetype plugin indent on    " required
@@ -11,6 +111,7 @@ set wildmenu " 'wild' tab completion of commands
 
 
 " GENERAL:
+set hidden " TextEdit might fail if hidden is not set.
 set nowrap
 set number
 set relativenumber
@@ -19,8 +120,10 @@ set splitright
 
 
 " COLORSCHEME:
+" ColorScheme settings need to be enabled before the colorscheme is set.
 set background=dark
-" colorscheme desert " Some colorschemes are provided by default, but none are amazing.
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
 
 
 " TABS:
