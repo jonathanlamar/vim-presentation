@@ -4,7 +4,7 @@
 
 " NOTE: If you are using this config, change the plug directory to
 " $HOME/.vim/plugged
-call plug#begin('.vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " BASIC PLUGINS EVERYONE SHOULD HAVE:
 
