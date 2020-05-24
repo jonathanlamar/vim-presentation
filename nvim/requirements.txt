@@ -1,0 +1,6 @@
+greenlet==0.4.15
+msgpack==1.0.0
+pynvim==0.4.1
+sexpdata==0.0.3
+six==1.14.0
+websocket-client==0.57.0

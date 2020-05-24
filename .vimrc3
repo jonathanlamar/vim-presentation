@@ -1,0 +1,95 @@
+"  VIMRC
+
+
+" PLUGINS:
+
+" NOTE: If you are using this config, change the plug directory to
+" $HOME/.vim/plugged
+call plug#begin('.vim/plugged')
+
+" BASIC PLUGINS EVERYONE SHOULD HAVE:
+
+" Make sure you use single quotes when including a plugin
+
+" Shorthand notation; fetches https://github.com/tpope/vim-repeat
+Plug 'tpope/vim-repeat' " Repeat plugin commands with period
+
+" Snazz up status line
+Plug 'https://github.com/vim-airline/vim-airline.git' " Any valid git URL is allowed
+
+" Groovy colorscheme
+Plug 'morhetz/gruvbox'
+
+" Comment out text objects
+Plug 'tpope/vim-commentary'
+
+" Syntax highlighting for most languages
+Plug 'sheerun/vim-polyglot'
+
+" SOME OTHER NICE PLUGINS I USE:
+
+" Git integration
+" Plug 'tpope/vim-fugitive'
+
+" Git integration with nerd tree
+" Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Nicer scala syntax and some other sugar
+" Plug 'derekwyatt/vim-scala'
+
+" Nicer pytho9n syntax
+" Plug 'vim-python/python-syntax'
+
+" Use LSP just like VSCode
+" This requires some extensive setup, but basically turns vim into an IDE
+" Plug 'neoclide/coc.nvim', {'branch': 'release' } 
+
+" Initialize plugin system
+call plug#end()
+
+
+" CONFIGURE HOW VIM RUNS:
+set clipboard=unnamedplus " Enable clipboard interaction.
+set mouse=a " Enable mouse interaction.
+set showcmd " drop-down tab completion on commands
+set nocompatible
+filetype plugin indent on    " required
+syntax enable
+set wildmenu " 'wild' tab completion of commands
+
+
+" GENERAL:
+set hidden " TextEdit might fail if hidden is not set.
+set nowrap
+set number
+set relativenumber
+set splitbelow " These are more intuitive to me
+set splitright
+
+
+" COLORSCHEME:
+" ColorScheme settings need to be enabled before the colorscheme is set.
+set background=dark
+colorscheme default
+
+
+" TABS:
+" Tabs are always four spaces and no funny business.
+" Except for filetypes where I don't like that.
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set expandtab
+set autoindent
+
+
+" SEARCHING:
+set showmatch " highlight matching parens
+set incsearch " search as characters are entered
+set hlsearch " highlight matches
+
+
+" FOLDS:
+set foldenable " enable folding
+set foldlevelstart=100 " open most folds by default
+set foldnestmax=1000 " 10 nested fold max
