@@ -84,9 +84,11 @@ For example: `d` for "delete" and "w" for word combine to produce the command
 * `(`, `)` - Skip sentence
 
 These can be repeated within commands, too.  For instance `2dw` and `d2w` both
-mean delete 2 words
+mean delete 2 words.  But only `c2w` means "change two words."
 
 ### Text Object Nouns
+
+Those were all simple, but this is where you start to see the expressive power.
 
 * `iw` - "inside word" (also `aw` to include whitespace)
 * `i"` - "inside quotes".  Similarly `i{`, `i(`, etc.  These are super useful in
@@ -99,6 +101,9 @@ mean delete 2 words
 * `f`, `F` - "find" the next character
 * `t`, `T` - "until" the next character (think 'till)
 * `/` - Search through the document for a match
+
+These can also be repeated, for instance `c2t)` will change until the second
+closing parenthesis after the cursor.
 
 ### Moving around
 
@@ -118,7 +123,7 @@ mean delete 2 words
 ## Configuring Vim
 
 TLDR: Use [Vim-plug](https://github.com/junegunn/vim-plug).  It is a very
-easy-to-use plugin manager by guthub superuser junegunn (who also writes lots of
+easy-to-use plugin manager by github superuser junegunn (who also writes lots of
 other good plugins).  Once installed, you can simply place statements like `Plug
 'tpope/commentary.vim'` in your vimrc and run the install command.  The string
 specifies a partial or complete github URL to a published vim plugin.
@@ -127,7 +132,14 @@ specifies a partial or complete github URL to a published vim plugin.
 
 Run this command in this directory (or in `~` to install globally):
 
+**WARNING:** If you already have a .vim directory, you should back it up first.
+
 ```bash
 curl -fLo .vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+
+## Good Practice
+
+Map plugin commands to leader, g-space, or control/alt+.  Don't go too crazy
+with plugins (like I have).

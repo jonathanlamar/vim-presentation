@@ -1,9 +1,10 @@
 "  VIMRC
 
+source rtp.vim " Avoid seeing ~/.vim
 
 " CONFIGURE HOW VIM RUNS:
 set clipboard=unnamedplus " Enable clipboard interaction.
-set mouse=a " Enable mouse interaction.
+" set mouse=a " Enable mouse interaction.  Only works with neovim
 set showcmd " drop-down tab completion on commands
 set nocompatible
 filetype plugin indent on    " required
@@ -12,7 +13,6 @@ set wildmenu " 'wild' tab completion of commands
 
 
 " GENERAL:
-set hidden " TextEdit might fail if hidden is not set.
 set nowrap
 set number
 set relativenumber
@@ -21,9 +21,8 @@ set splitright
 
 
 " COLORSCHEME:
-" ColorScheme settings need to be enabled before the colorscheme is set.
 set background=dark
-colorscheme default
+" colorscheme desert " Some colorschemes are provided by default, but none are amazing.
 
 
 " TABS:
