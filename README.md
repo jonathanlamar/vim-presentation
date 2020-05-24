@@ -130,12 +130,12 @@ specifies a partial or complete github URL to a published vim plugin.
 
 ### Initial setup
 
-Run this command in this directory (or in `~` to install globally):
+Run this command.
 
-**WARNING:** If you already have a .vim directory, you should back it up first.
+**WARNING:** If you already have a vim config, you should back it up first.
 
 ```bash
-curl -fLo .vim/autoload/plug.vim --create-dirs \
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 

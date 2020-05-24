@@ -1,7 +1,5 @@
 "  VIMRC
 
-source rtp.vim " Avoid seeing ~/.vim
-
 " CONFIGURE HOW VIM RUNS:
 set clipboard=unnamedplus " Enable clipboard interaction.
 " set mouse=a " Enable mouse interaction.  Only works with neovim

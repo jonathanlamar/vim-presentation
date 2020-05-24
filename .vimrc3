@@ -1,11 +1,5 @@
 "  VIMRC
 
-source rtp.vim " Avoid seeing ~/.vim
-
-
-
-
-
 " ------------------------   PLUGINS   ------------------------
 
 " NOTE: If you are using this config, change the plug directory to
@@ -59,8 +53,8 @@ call plug#end()
 
 
 " ------------------------   CONFIGURE PLUGINS   ------------------------
-map <C-n> :NERDTreeToggle<CR>
-nmap <C-/> :Commentary<CR>
+map <Leader>n :NERDTreeToggle<CR>
+nmap <Leader>/ :Commentary<CR>
 
 
 
