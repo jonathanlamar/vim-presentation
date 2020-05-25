@@ -74,9 +74,13 @@
 
 ### Some Jokes
 
+Vi has two modes: beep repeatedly and break everything.
+
 ![Easy Mode](images/link.jpg)
 
 ![Learning Curve](images/learningcurve.png)
+
+![Hottest Editors](images/xkcd.png)
 
 ## Vim as a Grammar of Text Movement and Text Objects
 
