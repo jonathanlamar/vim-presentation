@@ -4,7 +4,7 @@
 
 " NOTE: If you are using this config, change the plug directory to
 " $HOME/.vim/plugged
-call plug#begin('.vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " BASIC PLUGINS EVERYONE SHOULD HAVE:
 
@@ -28,7 +28,7 @@ Plug 'sheerun/vim-polyglot'
 " Basic file browser
 Plug 'preservim/nerdtree'
 
-" SOME OTHER NICE PLUGINS I USE:
+" SOME OTHER NICE PLUGINS:
 
 " Git integration
 " Plug 'tpope/vim-fugitive'
@@ -45,6 +45,9 @@ Plug 'preservim/nerdtree'
 " Use LSP just like VSCode
 " This requires some extensive setup, but basically turns vim into an IDE
 " Plug 'neoclide/coc.nvim', {'branch': 'release' } 
+
+" Low-distraction editing
+" Plug 'junegunn/goyo.vim'
 
 " Initialize plugin system
 call plug#end()

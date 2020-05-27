@@ -4,7 +4,47 @@
 
 * [Mastering the vim language](https://www.youtube.com/watch?v=wlR5gYd6um0)
 
-## My History with Vim
+## History of Vim
+
+* Started with `ed`.  Written by Ken Thompson and others of Bell Labs in 1971
+    for Unix.
+  * Short for "editor" because they needed one, so they wrote it (actually
+    adapted from `qed`).
+  * Notoriously terse: Shows one line at a time, and you have to query the file
+      you're editing.  Why?  Teletype.
+  * But supported regular expressions.  Actually the origin of the word "grep".
+* Starting the trend of these things one-upping each other with their names,
+  `ex` was "ed extended".  Developed by Bill Joy in 1976.
+  * Still one-line at a time, but much more feature-rich.
+  * Many of the features are familiar to modern day users of `vim`.  In
+    particular, `ex` added the colon for entering commands, as well as marks and
+    tags.
+* `ex` eventually implemented a fullscreen mode, accessed with the command `vi`.
+    This began the evolution of `ex` into `vi`.
+  * Introduced modes (insert/normal).
+  * Recognizable to the modern day user, although very feature poor compared to
+      modern `vim`.
+* `vi` was rewritten for lots of different systems and eventually in 1986, Bram
+    Moolenaar wrote `vim`, which was a port of `stevie`, which was a port of
+    `vi`.  `vim` has a much expanded feature set, including syntax highlighting
+    and a "visual select" mode.  It has been updated ever since and is on
+    version 8 currently.
+  * Standard text editor for nearly all linux systems.
+  * (Maybe?) introduced vimscript, which allowed the editor to be extended via
+    plugins and settings.
+* While `vim` is still actively maintained, in 2015, `neovim` released its first
+    public release.  This is an ongoing project which seeks to "aggresively"
+    refactor and modernize the `vim` codebase.  Naturally, people are angry
+    about it, but it is superior to vim for a few reasons:
+  * Gets rid of the "benevolent dictator" problem and has a more open community.
+  * It has an API which allows it to be embedded into GUI editors like IDEs.
+  * Supports an embedded terminal emulator.
+  * Support for asynchronous job control, which allows for LSP plugins.
+  * Refactored codebase drops support for a bunch of obselete hardware and will
+      be maintainable going forward.
+  * Super popular on linux youtube.
+
+### My History with Vim
 
 * Started in 2015 because I got cool-shamed into using it for LaTeX.
 * Learned some basic commands, mostly for configuring the look and feel, and
@@ -12,9 +52,8 @@
 * Wrote my dissertation in vim.
 * Got enough familiarity to use as a daily driver for python and general text
     editing (but not scala) by 2018.
-* After working at charter, gave up for a while and used Intellij + vim plugin,
-    but I didn't like the lack of configurability of the vim bindings in
-    Intellij.
+* Gave up for a while and used Intellij + vim plugin, but I didn't like the lack
+    of configurability of the vim bindings in Intellij.
 * Learned about plugins and extensibility of vim and set up for scala
     development.
 
@@ -35,9 +74,13 @@
 
 ### Some Jokes
 
+Vi has two modes: beep repeatedly and break everything.
+
 ![Easy Mode](images/link.jpg)
 
 ![Learning Curve](images/learningcurve.png)
+
+![Hottest Editors](images/xkcd.png)
 
 ## Vim as a Grammar of Text Movement and Text Objects
 
@@ -49,9 +92,10 @@ it's about expressive power without thought.
 Vim is a **modal** text editor.  This means there are multiple layers of
 interacting with your files.  Some of the common modes are:
 
-* Normal mode (where you do text **editing**)
-* Insert mode (where you do text **writing**)
-* Visual mode (selecting text, etc.)
+* Normal mode (where you do text **editing**) - Esc
+* Insert mode (where you do text **writing**) - i/I, a/A, s/S, etc.
+* Visual mode (selecting text, etc.) - v/V, etc.
+* Command mode (entering commands to the editor) ":"
 
 ### Basic Syntax
 
