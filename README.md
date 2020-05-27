@@ -113,12 +113,13 @@ closing parenthesis after the cursor.
 * `H`, `M`, `L` - Top, middle, bottom of text
 * `zt`, `zz`, `zb` - Move current line to top, middle, bottom
 
-### Advanced Topics
+### More Advanced Topics
 
 1. Macros: Record with `qq`.  Replay with `@q`
-2. Relative numbers
-3. Marks
+2. Relative numbers help with relative movement.
+3. Use marks to hold a spot.
 4. Remap commands and write your own.
+5. Use buffers for tabs, tabs for layouts
 
 ## Configuring Vim
 

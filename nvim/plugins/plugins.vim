@@ -79,6 +79,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     source $HOME/.config/nvim/plugins/settings/papercolor-theme.vim
 
     Plug 'joshdick/onedark.vim' " Decent middle ground with good support for both scala and python, but low contrast
+    source $HOME/.config/nvim/plugins/settings/onedark.vim
 
     Plug 'danilo-augusto/vim-afterglow'
     source $HOME/.config/nvim/plugins/settings/vim-afterglow.vim
